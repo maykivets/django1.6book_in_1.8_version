@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>
+        Hello World Title 11
+    </title>
+</head>
+<body>
+<h1>
+    Hello World Django 22
+</h1>
+<article>
+    Hello world ! 33 <br/>
+    <span> {{my_var}} </span>
+    <br>
+    <br>
+    <span>
+        {% if years < 10 %}
+            You are a child
+        {% elif years < 18 %}
+            You are a teenager
+        {% else %}
+            You are an adult!
+        {% endif %}
+    </span>
+
+    <ul>
+        {% for city in array_city %}
+            <li>
+                {{ city }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <p> {{ truncate_string|truncatechars:15 }} </p>
+
+    <a href="{% url 'public_connection' %}">Connection</a>
+
+</article>
+</body>
+</html>
